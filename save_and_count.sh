@@ -63,19 +63,13 @@ websites=(
 
 # Obtain array length
 length=${#websites[@]}
-echo "Array sites length: "$length
 
 # Generate 10 random sites
 sites=$(shuf -i 0-$length -n 10)
-echo $sites
 
 # Create 10 files to store the content of the index pages
-#for url in "${urls[@]}"
 for domains in $sites
 do
-   #echo "${domains}.index.html" > "${domains}.html"
-   # cur -L Follow redirects
-   #curl -L ${websites[$domains]} > "${websites[$domains]}.html"
    curl -L ${websites[$domains].index.html} > "${websites[$domains]}.html"
    echo "${websites[$domains]}"
 done
