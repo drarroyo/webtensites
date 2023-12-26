@@ -1,7 +1,5 @@
 #!/bin/bash
 
-start=$(date +%s)
-
 # List of websites 
 websites=( 
   "www.savanamed.com" 
